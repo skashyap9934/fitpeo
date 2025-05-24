@@ -83,9 +83,9 @@ export const upcomingAppointmentsThursday = [
   {
     key: 2,
     title: 'Ophthalmologist',
-    icon: 'FaUser',
+    icon: 'GiBoneKnife',
     time: '14:00 PM',
-    iconColor: 'brown',
+    iconColor: 'black',
   },
 ];
 
@@ -95,13 +95,13 @@ export const upcomingAppointmentsSaturday = [
     title: 'Cardiologist',
     icon: 'GiHeart',
     time: '12:00 AM',
-    iconColor: 'orange',
+    iconColor: 'red',
   },
   {
     key: 2,
     title: 'Neurologist',
-    icon: 'GiEye',
-    time: '16:00 PM',
-    iconColor: 'black',
+    icon: 'GiBrain',
+    time: '14:00 PM',
+    iconColor: 'brown',
   },
 ];

@@ -32,7 +32,7 @@ const UpcomingSchedule = () => {
         </div>
 
         <AllSchedules day={'Thursday'} items={upcomingAppointmentsThursday} />
-        <AllSchedules day={'Thursday'} items={upcomingAppointmentsSaturday} />
+        <AllSchedules day={'Saturday'} items={upcomingAppointmentsSaturday} />
       </Card>
     </div>
   );
