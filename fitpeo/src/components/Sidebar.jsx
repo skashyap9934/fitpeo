@@ -84,24 +84,26 @@ const Sidebar = () => {
     <React.Fragment>
       <Layout>
         <Sider
-          collapsible
           collapsed={collapsed}
           onCollapse={setCollapsed}
           breakpoint="md"
           onBreakpoint={(broken) => setCollapsed(broken)}
           width={256}
-          style={{ backgroundColor: '#F6FAFF' }}
+          style={{ backgroundColor: '#F6FAFF', position: 'fixed' }}
         >
           <Menu
             mode="inline"
-            style={{
-              backgroundColor: '#F6FAFF',
-            }}
+            style={{ backgroundColor: '#F6FAFF' }}
             items={items}
           />
         </Sider>
 
-        <Content style={{ backgroundColor: 'white' }}>
+        <Content
+          style={{
+            backgroundColor: 'white',
+            marginLeft: collapsed ? 80 : 256,
+          }}
+        >
           <DashboardMainContent collapsed={collapsed} />
         </Content>
       </Layout>

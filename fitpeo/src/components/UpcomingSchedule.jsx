@@ -1,26 +1,14 @@
-import { Card, Col, Row, Space, Typography } from 'antd';
-import { FaUser } from 'react-icons/fa';
-import { GiArm, GiTooth } from 'react-icons/gi';
+import { Card, Col, Row } from 'antd';
 import {
   scheduledAppointments,
+  upcomingAppointmentsSaturday,
   upcomingAppointmentsThursday,
 } from '../data/healthData';
+import AllSchedules from './AllSchedules';
+import { getIcon } from './GetIcon';
 import ScheduleItem from './ScheduleItem';
 
 const UpcomingSchedule = () => {
-  const getIcon = (icon, iconColor) => {
-    switch (icon) {
-      case 'GiTooth':
-        return <GiTooth color={iconColor} />;
-      case 'GiArm':
-        return <GiArm color={iconColor} />;
-      case 'FaUser':
-        return <FaUser color={iconColor} />;
-      default:
-        return;
-    }
-  };
-
   return (
     <div style={{ margin: 15 }}>
       <Row gutter={[16, 16]}>
@@ -43,25 +31,8 @@ const UpcomingSchedule = () => {
           <strong>The Upcoming Schedule</strong>
         </div>
 
-        <div>
-          <Typography.Text type="secondary">
-            <div>On Thursday</div>
-          </Typography.Text>
-
-          <Row gutter={[16, 16]}>
-            {upcomingAppointmentsThursday.map((item) => (
-              <Col key={item.key}>
-                <ScheduleItem
-                  title={item.title}
-                  icon={getIcon(item.icon, item.iconColor)}
-                  backgroundColor={'#DBE3F9'}
-                  textColor={item.textColor}
-                  time={item.time}
-                />
-              </Col>
-            ))}
-          </Row>
-        </div>
+        <AllSchedules day={'Thursday'} items={upcomingAppointmentsThursday} />
+        <AllSchedules day={'Thursday'} items={upcomingAppointmentsSaturday} />
       </Card>
     </div>
   );

@@ -88,3 +88,20 @@ export const upcomingAppointmentsThursday = [
     iconColor: 'brown',
   },
 ];
+
+export const upcomingAppointmentsSaturday = [
+  {
+    key: 1,
+    title: 'Cardiologist',
+    icon: 'GiHeart',
+    time: '12:00 AM',
+    iconColor: 'orange',
+  },
+  {
+    key: 2,
+    title: 'Neurologist',
+    icon: 'GiEye',
+    time: '16:00 PM',
+    iconColor: 'black',
+  },
+];
