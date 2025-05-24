@@ -8,4 +8,4 @@ A Health Tracking Application that allows users to monitor their daily health me
 
 <h2>Conclusion</h2>
 
-- Explore my live application now! https://walmart-kashyap.netlify.app
+- Explore my live application now! https://fitpeo-kashyap.netlify.app
