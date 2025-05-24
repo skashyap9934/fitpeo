@@ -6,23 +6,26 @@ import anatomy from '../assets/anatomy.jpg';
 const AnatomySection = () => {
   return (
     <>
-      <Col span={12}>
+      <Col xs={24} md={24} lg={12}>
         <Card
           size="small"
-          style={{ width: 'max-content', backgroundColor: '#F6FAFF' }}
+          style={{
+            margin: 'auto',
+            width: 'max-content',
+            backgroundColor: '#F6FAFF',
+          }}
         >
           <img
             src={anatomy}
             height={301}
             alt="anatomy"
-            style={{ paddingInline: 31 }}
+            style={{ paddingInline: 35 }}
           />
-
           <Button
             className="organ-details"
             style={{
               top: '25%',
-              left: '65%',
+              left: '60%',
               color: 'white',
               backgroundColor: '#3833b0',
             }}
@@ -36,7 +39,7 @@ const AnatomySection = () => {
           className="organ-details"
           style={{
             bottom: '30%',
-            right: '60%',
+            right: '55%',
             color: 'black',
             backgroundColor: '#03E0F0',
           }}

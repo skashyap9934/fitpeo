@@ -1,20 +1,10 @@
-import {
-  Button,
-  Card,
-  Col,
-  Grid,
-  Input,
-  Layout,
-  Row,
-  Space,
-  Typography,
-} from 'antd';
-const { Sider, Content } = Layout;
-const { useBreakpoint } = Grid;
 import { BellFilled, SearchOutlined } from '@ant-design/icons';
+import { Button, Col, Grid, Input, Layout, Row, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { GiPanda } from 'react-icons/gi';
 import { MdAdd } from 'react-icons/md';
+const { Sider, Content } = Layout;
+const { useBreakpoint } = Grid;
 
 const Header = () => {
   const screens = useBreakpoint();
@@ -31,15 +21,15 @@ const Header = () => {
         top: 0,
         zIndex: 1000,
         overflow: 'hidden',
-        paddingInline: 15,
       }}
     >
       <Sider
         style={{
           backgroundColor: '#F6FAFF',
           paddingBlock: 15,
+          paddingInline: 15,
         }}
-        width={collapsed ? 'max-content' : 241}
+        width={collapsed ? 'max-content' : 256}
       >
         <Typography.Title level={4} style={{ margin: 0 }}>
           <span style={{ color: '#39CFD8' }}>Health</span>
@@ -72,12 +62,11 @@ const Header = () => {
 
       <Content
         style={{
-          margin: 'auto',
           backgroundColor: '#F6FAFF',
           paddingBlock: 15,
         }}
       >
-        <Row gutter={[16, 16]} justify={'end'}>
+        <Row gutter={[16, 16]} justify={'end'} style={{ marginRight: 11 }}>
           <Col>
             <Button variant="solid" color="green" icon={<GiPanda />} />
           </Col>

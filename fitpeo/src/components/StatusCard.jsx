@@ -2,7 +2,7 @@ import { Card, Statistic } from 'antd';
 
 const StatusCard = ({ prefix, value, children }) => {
   return (
-    <Card size="small">
+    <Card size="small" style={{ backgroundColor: '#F6FAFF' }}>
       <Statistic
         valueStyle={{ fontSize: 'medium', display: 'flex', gap: 3 }}
         value={value}

@@ -102,7 +102,7 @@ const Sidebar = () => {
         </Sider>
 
         <Content style={{ backgroundColor: 'white' }}>
-          <DashboardMainContent />
+          <DashboardMainContent collapsed={collapsed} />
         </Content>
       </Layout>
     </React.Fragment>

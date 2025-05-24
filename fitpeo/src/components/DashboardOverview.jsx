@@ -1,10 +1,9 @@
+import { DownOutlined } from '@ant-design/icons';
 import { Col, Dropdown, Row, Space, Typography } from 'antd';
 import { GiHeartBeats, GiLungs, GiNoseFront } from 'react-icons/gi';
+import ActivityFeed from './ActivityFeed';
 import AnatomySection from './AnatomySection';
 import HealthStatusCards from './HealthStatusCards';
-import { DownOutlined } from '@ant-design/icons';
-
-const fontFamily = 'Poppins';
 
 const dropdownItems = [
   {
@@ -26,23 +25,20 @@ const dropdownItems = [
 
 export const DashboardOverview = () => {
   return (
-    <>
-      <Row
-        gutter={[16, 16]}
-        justify={'space-between'}
-        style={{ paddingInline: 11 }}
-      >
+    <div style={{ paddingInline: 11 }}>
+      <Row gutter={[16, 16]} justify={'space-between'}>
         <Col>
-          <Typography.Title level={4} style={{ color: 'navy', fontFamily }}>
+          <Typography.Title
+            level={4}
+            style={{ color: 'navy', fontFamily: 'Poppins' }}
+          >
             Dashboard
           </Typography.Title>
         </Col>
 
         <Col>
           <Space size={'small'}>
-            <Typography.Text style={{ color: 'navy', fontFamily }}>
-              This Week
-            </Typography.Text>
+            <div style={{ color: 'navy' }}>This Week</div>
 
             <Dropdown menu={{ items: dropdownItems }}>
               <DownOutlined style={{ cursor: 'pointer' }} />
@@ -51,15 +47,16 @@ export const DashboardOverview = () => {
         </Col>
       </Row>
 
-      <Row
-        gutter={[16, 16]}
-        style={{ paddingInline: 11, border: '2px solid red', width:'100%' }}
-        justify={'space-around'}
-
-      >
+      <Row gutter={[16, 16]} justify={'space-around'}>
         <AnatomySection />
         <HealthStatusCards />
       </Row>
-    </>
+
+      <Row>
+        <Col span={24}>
+          <ActivityFeed />
+        </Col>
+      </Row>
+    </div>
   );
 };

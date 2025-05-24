@@ -1,16 +1,19 @@
 import { Layout } from 'antd';
+import CalendarView from './CalendarView';
 import { DashboardOverview } from './DashboardOverview';
+import UpcomingSchedule from './UpcomingSchedule';
 const { Content, Sider } = Layout;
 
-const DashboardMainContent = () => {
+const DashboardMainContent = ({ collapsed }) => {
   return (
     <Layout style={{ backgroundColor: 'white' }}>
-      <Sider width={0} />
+      {!collapsed && <Sider width={0} />}
       <Content>
         <DashboardOverview />
       </Content>
-      <Content style={{ border: '1px solid blue', backgroundColor: '#F6FAFF' }}>
-        Two
+      <Content style={{ backgroundColor: '#F6FAFF' }}>
+        <CalendarView />
+        <UpcomingSchedule />
       </Content>
     </Layout>
   );
