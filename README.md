@@ -1,6 +1,6 @@
 # FitPeo
 
-![image](https://github.com/user-attachments/assets/b96e07d9-ef3d-498d-90c5-178c969b3113)
+![image](https://github.com/user-attachments/assets/f8293e25-61da-417c-8723-55a1b9aa0a01)
 
 <h1>FitPeo is a Health Tracking Application</h1>
 
